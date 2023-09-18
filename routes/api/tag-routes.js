@@ -78,7 +78,7 @@ router.delete('/:id', async (req, res) => {
       res.status(404).json({ message: "Tag ID not found." });
       return;
     } else {
-      res.status(200).json(tagData);
+      res.status(200).json(`${tagData} record deleted`);
     }
   } catch (err) {
     res.status(500).json(err);
